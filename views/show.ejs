@@ -1,0 +1,25 @@
+<div class="card mt-4" style="width: 25rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= data.name %></h5>
+    <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+    <p class="card-text"><%= data.author %></p>
+    <p class="card-text">No of pages: <%= data.pages %></p>
+    <p class="card-text">Price: £<%= data.price %></p>
+    <p class="card-text"><%= data.is_available ? 'Available' : 'Not Available' %></p>
+    <% if (user && user.is_admin) { %>
+        <a href="/books/edit/<%= data._id %>" class="card-link">Edit Book</a>
+    <% } %>
+
+    
+    <% if (data.is_available) { %>
+       <form action="/books/borrow/<%= data._id %>" method="POST">
+        <input type="submit" class="btn btn-success btn-sm" value="Borrow" >
+      </form>
+   <% } else { %>
+      <form action="/books/return/<%= data._id %>" method="POST" class="mt-2">
+        <button type="submit" class="btn btn-warning btn-sm">Return Book</button>
+      </form>
+    <% } %>
+  </div>
+
+</div>

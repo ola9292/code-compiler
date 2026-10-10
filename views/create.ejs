@@ -1,0 +1,24 @@
+
+<div class="mt-4">
+    <h1>Add Book</h1>
+</div>
+
+<form action="/books/create" method="POST">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Book Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Ogboju Ode ninu igbo irunmole">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Author Name</label>
+        <input type="text" class="form-control" name="author" placeholder="Jide Awobona">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Pages</label>
+        <input type="number" class="form-control" name="pages" placeholder="200">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Price</label>
+        <input type="number" class="form-control" name="price" placeholder="10">
+    </div>
+    <input type="submit" class="btn btn-success" value="Create">
+</form>

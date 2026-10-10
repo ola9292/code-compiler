@@ -1,0 +1,21 @@
+<h1>From Edit</h1>
+
+<form action="/books/edit/<%= data._id %>?_method=PUT" method="POST">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Book Name</label>
+        <input type="text" cl0ass="form-control" name="name" value="<%= data.name %>">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Author Name</label>
+        <input type="text" class="form-control" name="author" value="<%= data.author %>">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Pages</label>
+        <input type="number" class="form-control" name="pages" value="<%= data.pages %>">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Price</label>
+        <input type="number" class="form-control" name="price" value="<%= data.price %>">
+    </div>
+    <input type="submit" class="btn btn-warning" value="Update">
+</form>

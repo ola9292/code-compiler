@@ -1,0 +1,16 @@
+
+<div class="mt-4">
+    <h1>File Download</h1>
+    <a href="/">Upload a file</a>
+    <form id="downloadForm" action="" method="">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" name="password">
+        </div>
+        <input type="hidden" name="downloadid" value="<%= data %>">
+        <div>
+            <input type="submit" value="Download">
+        </div>
+    </form>
+    <div id="displayDownloadMessage"></div>
+</div>
