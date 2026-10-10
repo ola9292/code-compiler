@@ -106,10 +106,10 @@ Errors from the user's code return `400`. Genuine server failures return `500`.
 ## Installation
 
 ```bash
-git clone <your-repo-url>
-cd code-compiler-api
+git clone https://github.com/ola9292/code-compiler
+cd code-compiler
 npm install
-npm start
+npm run dev
 ```
 
 The server runs on `http://localhost:5001`.
@@ -142,4 +142,5 @@ curl -X POST http://localhost:5001/api/run \
 - Add rate limiting
 - Support `stdin` input
 - Add more languages
+
 # code-compiler
